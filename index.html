@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Web Screen</title>
+        <meta name="description" content="My Family Book">
+        <link rel="stylesheet" href="main.css">
+        <script type="text/javascript">
+            var index = 1;
+            var arrHeading = ["My Family Book", "Father", "Mother", "Self", "Sister"];
+            var arrImages = ["images/family_book.png", 
+                             "images/Father.png", 
+                             "images/Mother.png", 
+                             "images/Self.png", 
+                             "images/Sister.png"];
+            function NextMember()
+            {
+                document.getElementById('h1Heading').innerHTML = arrHeading[index];
+                document.getElementById('imgImage').src = arrImages[index];
+                index++;
+                
+                if(index == 4)
+                {
+                    index = 0;  
+                }
+            }
+        </script>
+    </head>
+    <body>        
+        <center>
+            <h1 id="h1Heading">My Family Book</h1>
+            <p>        
+                <a href="images/family_book.png">
+                    <img id="imgImage" alt="My Family Book" src="images/family_book.png" />
+                </a>        
+            </p>
+        <button type="button" onclick="NextMember()">Next</button>
+        </center>
+    </body>
+</html>
